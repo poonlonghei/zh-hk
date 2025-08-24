@@ -8,4 +8,4 @@ layout: page
 
 WhatsApp: [(+852) 9452 1580](http://wa.me/85294521580){:target="_blank"}
 
-聯絡地址: 31-39A Waterloo Road, Yau Ma Tei, Kowloon, Hong Kong SAR
+聯絡地址: 香港九龍油麻地窩打老道31-39A
