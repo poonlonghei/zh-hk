@@ -8,6 +8,7 @@ show_frame: true
 navigation:
   - {file: "index.html"}
   - {file: "about.md"}
+  - {file: "links.md"}
   - {file: "contact.md"}
   - {title: English, url: "https://poonlonghei.github.io/"}
 
