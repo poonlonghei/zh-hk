@@ -6,7 +6,7 @@ show_excerpts: false
 show_frame: true
 
 navigation:
-  - {file: "index.md"}
+  - {file: "index.html"}
   - {title: English, url: "https://poonlonghei.github.io/"}
 
 external:
