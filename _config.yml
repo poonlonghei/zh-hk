@@ -1,0 +1,25 @@
+title: "為一切人，成為一切"
+permalink: /:title/
+lang: "en"
+excerpt_separator: "\n\n\n"
+show_excerpts: false
+show_frame: true
+
+navigation:
+  - {file: "index.md"}
+  - {file: "about.md"}
+  - {file: "publications.md"}
+  - {file: "contact.md"}
+  - {file: "blog.html"}
+  - {title: English, url: "https://poonlonghei.github.io/"}
+
+external:
+  - {title: Color, icon: moon, url: "javascript:toggle()"}
+  - {title: Feed, icon: rss, url: "/feed.xml"}
+
+remote_theme: niklasbuschmann/contrast
+
+plugins:
+ - jekyll-remote-theme
+ - jekyll-feed
+ - jektex
