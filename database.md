@@ -12,6 +12,8 @@ layout: page
 
 * [安立甘習例彌撒規程](https://poonlonghei.github.io//files/ordinariate-ordomissae.pdf){:target="_blank"}
 
-### 禮儀經文
+### 常用祈禱文
 
 * [朝拜苦路經文](https://poonlonghei.github.io//files/via-crucis.pdf){:target="_blank"}
+
+* [上網前祈禱文](https://poonlonghei.github.io//files/ORATIO-ANTE-COLLIGATIONEM-IN-INTERRETE.pdf){:target="_blank"}
