@@ -1,5 +1,5 @@
 ---
-title: "資料庫"
+title: "藏書閣"
 permalink: "/database/"
 layout: page
 ---
