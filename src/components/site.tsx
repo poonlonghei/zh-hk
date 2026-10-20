@@ -8,14 +8,26 @@ function UkFlag() {
 }
 
 function HongKongFlag() {
-  const petal = <><path d="M0-11c5-2 8 2 5 6-1 2-3 3-5 5-2-2-4-3-5-5-3-4 0-8 5-6Z"/><path d="m0-8 .7 1.5 1.6.2-1.2 1 .3 1.6-1.4-.8-1.4.8.3-1.6-1.2-1 1.6-.2Z" fill="#de2910"/></>;
-  return <svg className="language-flag" viewBox="0 0 60 40" role="img" aria-label="Hong Kong flag"><path fill="#de2910" d="M0 0h60v40H0z"/><g fill="#fff" transform="translate(30 20)"><g>{petal}</g><g transform="rotate(72)">{petal}</g><g transform="rotate(144)">{petal}</g><g transform="rotate(216)">{petal}</g><g transform="rotate(288)">{petal}</g><circle r="1.2" fill="#de2910"/></g></svg>;
+  return <svg className="language-flag" viewBox="0 0 900 600" role="img" aria-label="Hong Kong SAR flag">
+    <path fill="#ee1c25" d="M0 0h900v600H0z" />
+    <defs>
+      <g id="hong-kong-flag-flower">
+        <path fill="#fff" d="M492.936022 125.19583a27.917245 27.917245 0 0 0-14.901582 41.791893 45.171052 45.171052 0 0 1-20.289932 66.204239 38.650583 38.650583 0 0 0-10.816469 64.313021 68.374981 68.374981 0 0 1-17.067835-93.913589 15.809868 15.809868 0 0 1-1.109109-1.047777 69.880683 69.880683 0 0 0 16.754434 95.793146 90.342104 90.342104 0 0 1 47.430493-173.140933" />
+        <path d="m451.979333 181.099409-27.564739 12.021638 29.366483 6.476437-19.951229-22.500734 2.915284 29.930515" />
+      </g>
+    </defs>
+    <use href="#hong-kong-flag-flower" />
+    <use href="#hong-kong-flag-flower" transform="rotate(72 450 300)" />
+    <use href="#hong-kong-flag-flower" transform="rotate(216 450 300)" />
+    <use href="#hong-kong-flag-flower" transform="rotate(144 450 300)" />
+    <use href="#hong-kong-flag-flower" transform="rotate(288 450 300)" />
+  </svg>;
 }
 
 export function LanguageMenu({ chinese = false }: { chinese?: boolean }) {
   return <DropdownMenu.Root>
     <DropdownMenu.Trigger className="language-trigger" aria-label={chinese ? "選擇語言" : "Choose language"}>
-      {chinese ? <HongKongFlag /> : <svg className="language-globe" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.35 2.35 3.45 5.4 3.45 9S14.35 18.65 12 21c-2.35-2.35-3.45-5.4-3.45-9S9.65 5.35 12 3Z"/></svg>}
+      <svg className="language-globe" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.35 2.35 3.45 5.4 3.45 9S14.35 18.65 12 21c-2.35-2.35-3.45-5.4-3.45-9S9.65 5.35 12 3Z"/></svg>
     </DropdownMenu.Trigger>
     <DropdownMenu.Portal><DropdownMenu.Content className="language-menu" align="end" sideOffset={10}>
       <DropdownMenu.Item asChild><a href="https://www.chavezpoon.com/" aria-current={!chinese ? "page" : undefined}><span className="language-option-label"><UkFlag />English</span><span>EN</span></a></DropdownMenu.Item>
