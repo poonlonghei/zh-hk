@@ -2,6 +2,7 @@
 
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { useEffect, useState } from "react";
+import { SITE_BASE_PATH } from "@/site-config";
 
 function UkFlag() {
   return <svg className="language-flag" viewBox="0 0 60 30" role="img" aria-label="United Kingdom flag"><path fill="#012169" d="M0 0h60v30H0z"/><path stroke="#fff" strokeWidth="6" d="m0 0 60 30M60 0 0 30"/><path stroke="#c8102e" strokeWidth="2.5" d="m0 0 60 30M60 0 0 30"/><path stroke="#fff" strokeWidth="10" d="M30 0v30M0 15h60"/><path stroke="#c8102e" strokeWidth="5" d="M30 0v30M0 15h60"/></svg>;
@@ -31,7 +32,7 @@ export function LanguageMenu({ chinese = false }: { chinese?: boolean }) {
     </DropdownMenu.Trigger>
     <DropdownMenu.Portal><DropdownMenu.Content className="language-menu" align="end" sideOffset={10}>
       <DropdownMenu.Item asChild><a href="https://www.chavezpoon.com/" aria-current={!chinese ? "page" : undefined}><span className="language-option-label"><UkFlag />English</span><span>EN</span></a></DropdownMenu.Item>
-      <DropdownMenu.Item asChild><a href="/" aria-current={chinese ? "page" : undefined}><span className="language-option-label"><HongKongFlag />繁體中文（香港）</span><span>繁</span></a></DropdownMenu.Item>
+      <DropdownMenu.Item asChild><a href={`${SITE_BASE_PATH}/`} aria-current={chinese ? "page" : undefined}><span className="language-option-label"><HongKongFlag />繁體中文（香港）</span><span>繁</span></a></DropdownMenu.Item>
     </DropdownMenu.Content></DropdownMenu.Portal>
   </DropdownMenu.Root>;
 }
@@ -41,9 +42,9 @@ export function SiteHeader({ chinese = false }: { chinese?: boolean }) {
   const t = chinese
     ? { about: "關於我", work: "作品", writing: "文章", contact: "聯絡" }
     : { about: "About", work: "Work", writing: "Writing", contact: "Contact" };
-  const sectionBase = "/";
+  const sectionBase = `${SITE_BASE_PATH}/`;
   return <header className="site-header">
-    <a className="site-brand" href={chinese ? "/" : "https://www.chavezpoon.com/"}>Chavez Poon<span>.</span></a>
+    <a className="site-brand" href={chinese ? `${SITE_BASE_PATH}/` : "https://www.chavezpoon.com/"}>Chavez Poon<span>.</span></a>
     <button className="mobile-menu-toggle" type="button" aria-label={menuOpen ? (chinese ? "關閉導覽選單" : "Close navigation menu") : (chinese ? "開啟導覽選單" : "Open navigation menu")} aria-expanded={menuOpen} aria-controls="site-navigation" onClick={() => setMenuOpen(open => !open)}>
       <span /><span /><span />
     </button>

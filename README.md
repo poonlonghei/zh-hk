@@ -11,12 +11,12 @@ npm ci
 npm run dev
 ```
 
-開啟 <http://localhost:3000>。建立靜態匯出請執行 `npm run build`。
+開啟 <http://localhost:3000/zh-hk/>。建立靜態匯出請執行 `npm run build`。
 
 ## 專案內容
 
 - `app/` — 繁體中文首頁、簡介頁及文件版面
-- `src/components/` — 導覽、頁尾、開機畫面及聯絡表單
+- `src/components/` — 導覽、頁尾及聯絡表單
 - `src/styles/site.css` — 網站樣式
 - `public/assets/` — 中文網站所需圖片及網站圖示
 - `package.json`、`package-lock.json` — Next.js 專案依賴
