@@ -17,8 +17,8 @@ backgroundCanvas = true
 [footer]
   showMenu = true
   showCopyright = true
-  showThemeAttribution = false
-  showAppearanceSwitcher = false
+  showThemeAttribution = true
+  showAppearanceSwitcher = true
   showScrollToTop = true
 
 [homepage]
@@ -32,7 +32,7 @@ backgroundCanvas = true
 
 [article]
   showDate = true
-  showAuthor = false
+  showAuthor = true
   showHero = false
   showBreadcrumbs = true
   showReadingTime = true
@@ -45,7 +45,7 @@ backgroundCanvas = true
   sharingLinks = ["email", "line"]
 
 [list]
-  showHero = false
+  showHero = true
   showBreadcrumbs = true
   showSummary = true
   showCards = true
