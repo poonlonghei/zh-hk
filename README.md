@@ -1,22 +1,25 @@
-# 香港繁體中文版網站
+# 香港繁體中文網站
 
-這是從 Chavez Poon 個人網站整理出的獨立 Next.js 專案，包含繁體中文首頁、簡介頁、共用網站元件及所需圖片與圖示。原本的 `/zh-hk/` 網站路由仍保留在 Personal Website。
+本網站使用 Hugo、Blowfish 及 Markdown 建置，並部署至 GitHub Pages。
 
 ## 本機預覽
 
-需要 Node.js 22 或以上版本。在此資料夾執行：
+請安裝 Hugo Extended 0.167.0，以及 Go 1.25 或以上版本。首次啟動時，Hugo 會按 `go.mod` 下載 Blowfish 主題。
 
 ```sh
-npm ci
-npm run dev
+hugo server
 ```
 
-開啟 <http://localhost:3000/zh-hk/>。建立靜態匯出請執行 `npm run build`。
+開啟 <http://localhost:1313/zh-hk/>。
 
-## 專案內容
+## 編輯內容
 
-- `app/` — 繁體中文首頁、簡介頁及文件版面
-- `src/components/` — 導覽、頁尾及聯絡表單
-- `src/styles/site.css` — 網站樣式
-- `public/assets/` — 中文網站所需圖片及網站圖示
-- `package.json`、`package-lock.json` — Next.js 專案依賴
+- `content/_index.md` — 首頁及首頁介紹
+- `content/biography.md` — 簡介
+- `content/blog/_index.md` — 文章列表介紹
+- `content/blog/` — 以 Markdown 撰寫的文章
+- `config/_default/` — Hugo、Blowfish、語言及導覽設定
+- `assets/css/custom.css`、`assets/img/` — 網站自訂樣式及主題圖片
+- `public/assets/` — 網站圖片及圖示
+
+新增文章時，在 `content/blog/` 建立 Markdown 檔案，並在檔案開首加入標題、日期、摘要及標籤等 front matter。
