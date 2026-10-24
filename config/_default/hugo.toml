@@ -6,7 +6,6 @@ enableRobotsTXT = true
 summaryLength = 30
 staticDir = ["public"]
 publishDir = "out"
-theme = "blowfish"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
